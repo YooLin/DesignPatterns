@@ -1,4 +1,4 @@
-package com.lyc.templet.extend;
+package com.lyc.template.extend;
 
 /**
  * @Author YooLin
