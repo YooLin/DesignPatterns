@@ -7,7 +7,7 @@ public class WhiteFactory extends AbstractMutiFactory{
     }
 
     public static void main(String[] args) {
-        WhiteFactory whiteFactory = new WhiteFactory();
+        AbstractMutiFactory whiteFactory = new WhiteFactory();
         Human human = whiteFactory.createHuman();
         human.talk();
     }

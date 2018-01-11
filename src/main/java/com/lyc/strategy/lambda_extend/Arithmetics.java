@@ -22,8 +22,12 @@ public enum Arithmetics {
         return this.operator.apply(x, y);
     }
 
+    public BigDecimal calculate(String x, String y) {
+        return this.calculate(new BigDecimal(x), new BigDecimal(y));
+    }
+
     public static void main(String[] args) {
-        System.out.println(Arithmetics.ADD.calculate(new BigDecimal("1.23"), new BigDecimal("6.78")));//8.01
+        System.out.println(Arithmetics.ADD.calculate("1.23", "6.78"));//8.01
         System.out.println(Arithmetics.SUB.calculate(new BigDecimal("1.23"), new BigDecimal("6.78")));//-5.55
     }
 }

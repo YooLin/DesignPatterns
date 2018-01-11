@@ -9,8 +9,7 @@ import java.lang.reflect.InvocationTargetException;
  * @Description 单例工厂模式 使用工厂模式实现单例
  */
 public class SingleTonFactory {
-
-    private static Person instance = null;
+    private static volatile Person instance = null;
 
     public static Person getInstance(){
         //double check 双重检查
@@ -21,7 +20,8 @@ public class SingleTonFactory {
                     try {
                         Class<?> clazz = Class.forName(Person.class.getName());
                         Constructor<?> constructor = clazz.getDeclaredConstructor();
-                        constructor.setAccessible(true);//设置构造器可访问
+                        //设置构造器可访问
+                        constructor.setAccessible(true);
                         instance = (Person) constructor.newInstance();
                     } catch (ClassNotFoundException e) {
                         e.printStackTrace();

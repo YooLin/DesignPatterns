@@ -12,7 +12,7 @@ public class BlackFactory extends AbstractMutiFactory{
         return new BlackHuman();
     }
     public static void main(String[] args){
-        BlackFactory blackFactory = new BlackFactory();
+        AbstractMutiFactory blackFactory = new BlackFactory();
         Human human = blackFactory.createHuman();
         human.talk();
     }

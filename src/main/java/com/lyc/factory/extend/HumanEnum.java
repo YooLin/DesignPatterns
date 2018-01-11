@@ -11,7 +11,7 @@ import java.util.function.Supplier;
 public enum HumanEnum {
     MAN(Man::new), WOMAN(Woman::new);
 
-    private Supplier<Human> human;
+    private final Supplier<Human> human;
 
     HumanEnum(Supplier<Human> human) {
         this.human = human;

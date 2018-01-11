@@ -28,9 +28,12 @@ public class LazyFactory {
                 case "yellow":
                     human = new YellowHuman();
                     break;
+                default:
+                    break;
             }
-            if (human != null)
+            if (human != null) {
                 prMap.put(type, human);
+            }
         }
         return human;
     }
